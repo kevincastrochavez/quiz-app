@@ -22,7 +22,6 @@ Kotlin is a multiplatform mobile language (shares the logic of your Android and 
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
 * Add functionality of not being able to click a new answer when you got it wrong
 * If no answer was selected, button cannot be clicked
 * Add feature of being able to add different quizzed with their corresponding questions
