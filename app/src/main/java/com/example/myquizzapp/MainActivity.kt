@@ -15,8 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         val btn_start : Button = findViewById(R.id.btn_start)
         val et_name : EditText = findViewById(R.id.et_name)
+//        Event listener to fire after you entered your name anc clicked Start
         btn_start.setOnClickListener {
             if (et_name.text.isEmpty()) {
+//                In case user didn't enter name
                 Toast.makeText(this, "Please enter your name", Toast.LENGTH_LONG).show()
             } else {
 //                Redirects you

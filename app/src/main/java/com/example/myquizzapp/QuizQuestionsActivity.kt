@@ -36,10 +36,12 @@ class QuizQuestionsActivity : AppCompatActivity(), OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        Delivers the view with the questions
         setContentView(R.layout.activity_quiz_questions2)
 
         mUserName = intent.getStringExtra(Costants.USER_NAME)
 
+//        Getting all the ids
         progressBar=findViewById(R.id.progressBar)
         tvProgress = findViewById(R.id.tv_progress)
         tvQuestion = findViewById(R.id.tv_question)
@@ -63,6 +65,8 @@ class QuizQuestionsActivity : AppCompatActivity(), OnClickListener {
     private fun setQuestion() {
         defaultOptionsView()
 
+//        Updates the view according to the current question, including different options
+//        for the answers
         val question: Question = mQuestionsList!![mCurrentPosition - 1]
         ivImage?.setImageResource(question.image)
         progressBar?.progress = mCurrentPosition
@@ -120,6 +124,7 @@ class QuizQuestionsActivity : AppCompatActivity(), OnClickListener {
     }
 
     override fun onClick(view: View?) {
+//        Determines what happens when answer is clicked
         when(view?.id) {
             R.id.tv_option_one -> {
                 tvOptionOne?.let {

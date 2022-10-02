@@ -1,6 +1,7 @@
 package com.example.myquizzapp
 
 object Costants {
+//    Constants to keep track of the user
     const val USER_NAME: String = "user_name"
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANSWERS: String = "correct_answers"
@@ -107,6 +108,7 @@ object Costants {
 
         questionsList.add(que10)
 
+//        Return the whole collection
         return questionsList
     }
 }
