@@ -3,6 +3,7 @@ package com.example.myquizzapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.SyncStateContract.Constants
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             } else {
 //                Redirects you
                 val intent = Intent(this, QuizQuestionsActivity::class.java)
+                intent.putExtra(Costants.USER_NAME, et_name.text.toString())
                 startActivity(intent)
 //                Finishes the current activity
                 finish()
